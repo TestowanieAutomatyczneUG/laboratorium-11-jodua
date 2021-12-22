@@ -6,7 +6,7 @@ class FriendShips:
         self.friendships = {}
 
     def addPerson(self, person: str) -> None:
-        if self.friendships.get(person) != None:
+        if self.friendships.get(person) is not None:
             raise ValueError("Person already exist")
         self.friendships[person] = []
 
@@ -20,15 +20,15 @@ class FriendShips:
 
     def areFriends(self, person1: str, person2: str) -> bool:
         friends = self.friendships.get(person1)
-        if friends == None:
+        if friends is None:
             raise ValueError("Person1 does not exist")
         if person2 in friends:
             return True
         return False
 
     def addFriend(self, person: str, friend: str) -> None:
-        if self.friendships.get(person) == None:
+        if self.friendships.get(person) is None:
             raise ValueError("Person does not exist")
-        if self.friendships.get(friend) == None:
+        if self.friendships.get(friend) is None:
             raise ValueError("Friend does not exist")
         self.friendships.get(person).append(friend)

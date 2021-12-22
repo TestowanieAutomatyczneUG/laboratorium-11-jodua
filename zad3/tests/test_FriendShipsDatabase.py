@@ -1,7 +1,6 @@
 from unittest import TestCase
 from unittest.mock import MagicMock
 from assertpy import assert_that
-from assertpy.assertpy import assert_warn
 from src.FriendShipsDatabase import FriendShipsDatabase
 
 
